@@ -1,0 +1,145 @@
+@charset "UTF-8";
+
+/* * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+} */
+
+
+ /* Estilo geral */
+
+ body {
+    font-family: "Poppins", sans-serif;
+    background-color: #191919;
+    padding: 0;
+    margin: 0;
+}
+
+ img {
+    max-width: 100%;
+}
+
+.container {
+    max-width: 1200px;
+    padding: 0 20px;
+    margin: 10px auto;
+}
+
+.header-section {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.title {
+    font-size: 40px;
+    font-weight: bold;
+    color: #cccccc;
+}
+
+.subtitle {
+    font-size: 28px;
+    font-weight: normal;
+    color: #cccccc;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.subtitle::after {
+    content: "";
+    width: 100px;
+    height: 1px;
+    background-color: #e500ce;
+}
+
+/* Estilo geral */
+
+.info-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.info-menu {
+    display: flex;
+    align-items: center;
+}
+
+.menu ul {
+    display: flex;
+    list-style: none;
+    padding: 0 10px;
+}
+
+.menu ul li {
+    margin-right: 20px;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: #a7a7a7;
+    transition: 1s;
+}
+
+.menu ul li a:hover {
+    color: #e500ce;
+
+}
+
+/*  Apresentação */
+
+#presentation {
+    margin: 100x;
+}
+
+.info-presentation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.info-presentation h1 {
+    font-size: 58px;
+    color: #d9d9d9;
+    line-height: 66px;
+}
+
+.info-presentation span {
+    background: linear-gradient(
+        90deg, 
+        rgba(26,127,243,1) 0%, 
+        rgba(107,109,214,1) 35%, 
+        rgba(203,36,180,1) 100%
+    );
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #d9d9d9;
+}
+
+.profile-photo {
+    width:350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    background: linear-gradient(
+        180deg,
+        rgba(203, 36, 180 ,1) 20%,
+        rgba(26, 171, 243 ,1) 100%,
+        rgba(107, 109, 214 ,1) 100%
+    );
+}
+
+.profile-photo img {
+    width: 335px;
+}
+
+.info-aboutme {
+    font-size: 18px;
+    color: #a7a7a7;
+
+}
