@@ -20,6 +20,11 @@
     max-width: 100%;
 }
 
+p {
+    margin: 0;
+    padding: 0;
+}
+
 .container {
     max-width: 1200px;
     padding: 0 20px;
@@ -125,7 +130,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 100%;
+    border-radius: 50%;
     background: linear-gradient(
         180deg,
         rgba(203, 36, 180 ,1) 20%,
@@ -142,4 +147,220 @@
     font-size: 18px;
     color: #a7a7a7;
 
+}
+
+/* Tecnologias */
+
+#technologies {
+    margin: 100px 0;
+}
+
+.container-icons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 60px 0;
+}
+
+.container-icons {
+    filter: grayscale(0);
+    transition: filter 0.5s;
+
+}
+
+.container-icons img:hover {
+    cursor: pointer;
+    filter: grayscale(100);
+}
+
+/*  Projetos */
+
+.info-projects {
+    display: flex;
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.card-project {
+    min-height: 600px;
+    height: fit-content;
+    background-color: #363636;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+}
+
+.info-card-project {
+    padding: 28px;
+}
+
+.info-card-project h3 {
+    color: #cccccc;
+    font-size: 28px;
+    font-weight: normal;
+}
+
+.info-card-project p {
+    color: #cccccc;
+    font-size: 18px;
+    text-align: justify;
+}
+
+.legend-project {
+    color: #cccccc;
+    font-size: 14px;
+}
+
+.footer-project {
+    display: flex;
+    justify-content: space-between;
+}
+
+.url-project, .code-project {
+    display: flex;
+    align-items: center;
+}
+
+.url-project a, .code-project a {
+    color: rgb(216, 120, 216);
+    padding-left: 5px;
+
+}
+
+/* Depoimentos */
+
+#depositions {
+    margin: 100px 0;
+}
+
+.info-depositions {
+    display: flex;
+    flex-direction: column;   
+}
+
+.container-depositions {
+    display: flex;
+    gap: 50px;
+    margin-top: 50px;
+}
+
+.controls-depositions {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+}
+
+.prev-depositions {
+    border-radius: 15px;
+    background-color: #f10677;
+    font-size: 20px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.next-depositions {
+    border-radius: 15px;
+    border: 1px solid #f10677;
+    font-size: 20px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.disable {
+    opacity: 80%;
+    pointer-events: none;
+    background-color: #f2f2f2;
+    box-shadow: none;
+    cursor: not-allowed;
+}
+
+.outline-card-depositions {
+    border: 1px solid #f10677;
+    padding: 25px 28px;
+    border-radius: 16px;
+    height: 370px;
+}
+
+.outline-card-depositions p {
+    color: #ffffff50;
+    margin-top: 10px;
+    
+}
+
+.outline-card-depositions::before {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-image: url(assets/quotes.svg);
+    background-size: cover;
+}
+
+.justify-depositions {
+    text-align: justify;
+    text-indent: 30px;
+}
+
+.footer-card-depositions {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.info-personal-despositions {
+    display: flex;
+    flex-direction: column;
+}
+
+.name-depositions {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+
+.occupation-depositions {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+.fill-in-card-depositions {
+    background-color: #f10677;
+    padding: 25px 28px;
+    border-radius: 16px;
+    height: 370px;
+}
+
+.fill-in-card-depositions p {
+    margin-top: 10px;
+}
+
+.fill-in-card-depositions::before {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-image: url(assets/quotes-white.svg);
+    background-size: cover;
+}
+
+.occupation-color {
+    color: black;
+}
+
+.fill-in-card-depositions, .occupation-depositions{
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
 }
