@@ -56,3 +56,99 @@ prevButton.addEventListener("click", prevCard);
 nextButton.addEventListener("click", nextCard);
 showCards();
 window.addEventListener("resize", showCards);
+
+
+/* Contato do site */
+
+document.addEventListener("DOMContentLoaded", function(){
+    const form = document.querySelector("form");
+    const successMessage = document.getElementById("success-message");
+    const errorMessage = document.getElementById("error-message");
+    const loading = document.getElementById("loading");
+
+    form.addEventListener("submit", function(e){
+        e.preventDefault();
+
+        const nome = document.getElementById("nome").value;
+        const email = document.getElementById("email").value;
+        const assunto = document.getElementById("assunto").value;
+        const mensagem = document.getElementById("mensagem").value;
+
+        form.style.display = "none";
+        successMessage.style.display = "none"
+        errorMessage.style.display = "none"
+        loading.style.display = "block"
+
+        const data = {
+            to: "codestart@gmail.com",
+            from: "codestart@hotmail.com" ,/* OBS: Precisa ser hotmail */
+            subject: "Contato do site",
+            text: "Contato do site",
+            html: `<p>Nome: ${nome}</p<br/><p>Email: ${email}</p<br/><p>Assunto: ${assunto}</p<br/><p>Mensagem: ${mensagem}</p<br/>`,
+        }
+
+        fetch("https://jnekrnrkrk", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(data)
+        }).then(res => {
+            if(res.ok){
+                loading.style.display = "none"
+                successMessage.style.display = "block"
+            } else{
+                loading.style.display = "none"
+                errorMessage.style.display = "block"
+                console.error(`Erro na resposta da api: ${res.status} ${res.statusText}`)
+            }
+        }).cath((error) => {
+            console.error(error);
+            loading.style.display = "none";
+            errorMessage.style.display = "block"
+        })
+
+    })
+
+})
+
+/* Scroll */
+
+function scrollToSection (sectionId){
+    const section = document.querySelector(sectionId)
+
+    if(section){
+        let scrollOffset = 0;
+
+        if(sectionId === "#projects"){
+            scrollOffset = section.offsetTop - 70;
+        } else {
+            scrollOffset = section.offset - (window.innerHeight - section.clientHeight) / 2
+        }
+
+        window.scrollTo({
+            top:scrollOffset,
+            behavior: 'smooth'
+        })
+    }
+}
+
+document.addEventListener("DOMContentLoaded", function(){
+    const links = document.querySelector("nav a")
+    links.forEach(function(link) {
+        link.addEventListener("click", function(e){
+            e.preventDefault()
+            const sectionId = link.getAttribute("href")
+            scrollToSection(sectionId)
+        })
+    })
+
+    const footerLinks = document.querySelector("footer a")
+    footerLinks.forEach(function (link) {
+        link.addEventListener("click", function (e) {
+            e.preventDefault()
+            const sectionId = link.getAttribute("href")
+            scrollToSection(sectionId)
+        })
+    })
+})
