@@ -93,6 +93,14 @@ p {
   color: #e500ce;
 }
 
+.icons-menu a img {
+    transition: filter 0.3s ease; /* Transição suave */
+}
+
+.icons-menu a:hover img {
+    filter: invert(75%);
+}
+
 .mobile-menu-icon {
   display: none;
   cursor: pointer;
