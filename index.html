@@ -5,80 +5,117 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <title>Portofólio Pessoal - Marques Filho</title>
+    <title>Modelo Portifolio</title>
     <meta name="description" content="Meu nome é Marques Filho, sou desenvolvedor">
-    <link rel="stylesheet" href="style.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="assets/styles/style.css">
 </head>
 
 <body>
     <header>
         <div class="container">
             <div class="info-header">
-                <div class="logo">
-                    <img src="assets/logo.svg" alt="Logo Code Start">
+                <!-- Navegação principal -->
+                <nav class="menu" aria-label="Navegação principal">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#aboutme">Sobre</a></li>
+                        <li><a href="#technologies">Tecnologias</a></li>
+                        <li><a href="#projects">Projetos</a></li>
+                        <li><a href="#contact">Contato</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Ícones de redes sociais -->
+                <div class="icons-menu">
+                    <a href="https://github.com/Marques-Filho" target="_blank"><img src="assets/image/github.svg"
+                            alt="Imagem Github Code Start"></a>
+                    <a href="#" target="_blank"><img src="assets/image/twitter.svg" alt="Imagem Twitter Code Start"></a>
+                    <a href="#" target="_blank"><img src="assets/image/linkedin.svg"
+                            alt="Imagem LinkedIn Code Start"></a>
                 </div>
-                <div class="info-menu">
-                    <nav class="menu">
-                        <ul>
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#aboutme">Sobre</a></li>
-                            <li><a href="#technologies">Tecnologias</a></li>
-                            <li><a href="#projects">Projetos</a></li>
-                            <li><a href="#contact">Contato</a></li>
-                        </ul>
-                    </nav>
-                    <div class="icons-menu">
-                        <a href="#" target="_blank"><img src="assets/github.svg" alt="Imagem Github Code Start"></a>
-                        <a href="#" target="_blank"><img src="assets/twitter.svg" alt="Imagem Twitter Code Start"></a>
-                        <a href="#" target="_blank"><img src="assets/linkedin.svg" alt="Imagem LinkedIn Code Start"></a>
-                    </div>
-                </div>
-                <div class="mobile-menu-icon">&#9776;</div>
+
+                <!-- Ícone do menu para mobile -->
+                <div class="mobile-menu-icon" aria-label="Abrir menu">&#9776;</div>
             </div>
         </div>
     </header>
-    <section id="presentation">
+
+    <section id="presentation" aria-labelledby="section-title">
         <div class="container">
             <div class="info-presentation">
-                <h1>
-                    Olá!<br />
-                    Meu nome é Marques Matos<br />
-                    E eu sou<br />
-                    <span>Desenvolvedor Web</span>
-                </h1>
+                <div class="text-content">
+                    <h1 id="section-title">
+                        Olá!<br />
+                        Meu nome é <br><span class="highlight">Marques Matos</span><br />
+                    </h1>
+                </div>
                 <div class="profile-photo">
-                    <img class="photo" src="assets/teste-foto-redonda.png" alt="Foto Marques Filho">
+                    <img class="photo" src="assets/image/teste-foto-redonda.png"
+                        alt="Foto de Marques Matos, desenvolvedor web">
                 </div>
             </div>
         </div>
     </section>
-    <section id="aboutme">
+
+    <section id="aboutme" aria-labelledby="about-title">
         <div class="container">
             <div class="info-aboutme">
-                <div class="header-section">
-                    <h1 class="title">Sobre mim</h1>
+                <header class="header-section">
+                    <h1 id="about-title" class="title">Sobre mim</h1>
                     <h2 class="subtitle">Um desenvolvedor apaixonado por novos conhecimentos</h2>
-                </div>
-                <p class="p-about">👋 Meu nome é Marques Matos, tenho 34 anos e tenho paixão por aprender a desenvolver
-                    sites e
-                    aplicativos mobile! Gosto de conhecer pessoas e conversar sobre qualquer assunto.</p>
-                <p class="p-about">👨‍💻 Estou há 6 meses estudando desenvolvimento web e programação, já aprendi
-                    algumas ferramentas
-                    como HTML, CSS, Boostrap, Git, Github e React.</p>
-                <p class="p-about">🎓 Sou aluno do curso presencial de Full Stack na Digital College, aluno do
-                    CursoEmVideo com o
-                    professor Gustavo Guanabara e aluno do curso online da Code Start.</p>
-                <p class="p-about">💡 Meu interesse é na área de desenvolvimento no Front-end utilizando React.</p>
-                <p class="p-about">🚀 No momento estou adquirindo novos conhecimentos estudando CRUD, consumo de API e
-                    Context API.</p>
+                </header>
+
+                <p class="p-about">
+                    <span aria-hidden="true">👋</span> Meu nome é <strong>Marques Matos</strong>, tenho 34 anos e sou
+                    apaixonado por desenvolvimento de
+                    software e <strong>Inteligência Artificial</strong>. Gosto de interagir com pessoas e trocar ideias
+                    sobre qualquer assunto.
+                </p>
+
+                <p class="p-about">
+                    <span aria-hidden="true">👨‍💻</span> Atualmente, estou focado em <strong>desenvolvimento
+                        web</strong>,
+                    programação e <strong>engenharia de prompt</strong>.
+                    Já adquiri conhecimento em diversas ferramentas, como <strong>HTML</strong>, <strong>CSS</strong>,
+                    <strong>Bootstrap</strong>, <strong>Git</strong>, <strong>GitHub</strong> e <strong>React</strong>.
+                </p>
+
+                <p class="p-about">
+                    <span aria-hidden="true">🎓</span> Sou graduando em <strong>Engenharia de Software</strong> pelo
+                    Centro
+                    Universitário Internacional Uninter,
+                    além de estar cursando <strong>Full Stack</strong> presencialmente na Digital College. Também faço
+                    parte
+                    do <strong>Curso em Vídeo</strong>, com o professor Gustavo Guanabara,
+                    e do curso online na <strong>Code Start</strong>.
+                </p>
+
+                <p class="p-about">
+                    <span aria-hidden="true">💡</span> Meu principal interesse está na área de <strong>desenvolvimento
+                        de
+                        software</strong>, participando ativamente das diferentes
+                    etapas do ciclo de desenvolvimento.
+                </p>
+
+                <p class="p-about">
+                    <span aria-hidden="true">🚀</span> Atualmente, estou expandindo meus conhecimentos em
+                    <strong>JavaScript</strong>, <strong>CRUD</strong>, consumo de <strong>API</strong>,
+                    além de aprofundar meu estudo em <strong>Inteligência Artificial</strong>, explorando temas como
+                    <strong>machine learning</strong>, <strong>deep learning</strong>,
+                    <strong>processamento de linguagem natural (PLN)</strong>, e <strong>modelos de linguagem de grande
+                        escala (LLMs)</strong>.
+                </p>
             </div>
         </div>
     </section>
+
     <section id="technologies">
         <div class="container">
             <div class="header-section">
@@ -86,16 +123,16 @@
                 <h2 class="subtitle">Essas são as tecnologias que tenho conhecimento</h2>
             </div>
             <div class="container-icons">
-                <img src="assets/tecnologies/html.svg" alt="Imagem  HTML Code Start">
-                <img src="assets/tecnologies/css.svg" alt="Imagem CSS Code Start">
-                <img src="assets/tecnologies/javascript.svg" alt="Imagem JavaScript Code Start">
-                <img src="assets/tecnologies/bootstrap.svg" alt="Imagem Bootstrap Code Start">
+                <img src="assets/image/tecnologies/html.svg" alt="Imagem  HTML Code Start">
+                <img src="assets/image/tecnologies/css.svg" alt="Imagem CSS Code Start">
+                <img src="assets/image/tecnologies/javascript.svg" alt="Imagem JavaScript Code Start">
+                <img src="assets/image/tecnologies/bootstrap.svg" alt="Imagem Bootstrap Code Start">
             </div>
             <div class="container-icons">
-                <img src="assets/tecnologies/vscode.svg" alt="Imagem Vscode Code Start">
-                <img src="assets/tecnologies/git.svg" alt="Imagem Git Code Start">
-                <img src="assets/tecnologies/github.svg" alt="Imagem Github Code Start">
-                <img src="assets/tecnologies/react.svg" alt="Imagem React Code Start">
+                <img src="assets/image/tecnologies/vscode.svg" alt="Imagem Vscode Code Start">
+                <img src="assets/image/tecnologies/git.svg" alt="Imagem Git Code Start">
+                <img src="assets/image/tecnologies/github.svg" alt="Imagem Github Code Start">
+                <img src="assets/image/tecnologies/react.svg" alt="Imagem React Code Start">
             </div>
         </div>
     </section>
@@ -107,64 +144,52 @@
             </div>
             <div class="info-projects">
                 <div class="card-project">
-                    <img src="assets/img-project.svg" alt="Imagem Projeto x Code Start">
+                    <img src="assets/image/img-project.svg" alt="Imagem Projeto x Code Start">
                     <div class="info-card-project">
-                        <h3>Controle Financeiro</h3>
-                        <p>Esse sistema foi desenvolvido para realizar o controle financeiro de empresas. Nesse sistema
-                            é possível gerenciar custos e fazer relatórios através dos dados dos captados.</p>
+                        <h3>Site Modelo</h3>
+                        <p>Essa landing page modelo foi desenvolvida para apresentar serviços de uma empresa de forma
+                            clara, atrativa e objetiva.</p>
                         <div class="legend-project">
-                            <p><strong>Stack:</strong> HTML, CSS, React, Node JS</p>
+                            <p><strong>Stack:</strong> HTML, CSS, JavaScript, Bootstrap</p>
                         </div>
                         <div class="footer-project">
-                            <div class="url-project">
-                                <img src="assets/link-icon.svg" alt="Imagem projeto X Code Start">
-                                <a href="#">Site do projeto</a>
-                            </div>
                             <div class="code-project">
-                                <img src="assets/github-icon.svg" alt="Link do código do projeto X Code Start">
-                                <a href="#">Código fonte</a>
+                                <img src="assets/image/github-icon.svg" alt="Link do código do projeto X Code Start">
+                                <a href="https://marques-filho.github.io/bootstrap-project/">Site do projeto</a>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="card-project">
-                    <img src="assets/img-project.svg" alt="Imagem Projeto x Code Start">
+                    <img src="assets/image/img-project.svg" alt="Imagem Projeto x Code Start">
                     <div class="info-card-project">
-                        <h3>Controle Financeiro</h3>
-                        <p>Esse sistema foi desenvolvido para realizar o controle financeiro de empresas. Nesse sistema
-                            é possível gerenciar custos e fazer relatórios através dos dados dos captados.</p>
+                        <h3>Site Receita</h3>
+                        <p>Essa landing page modelo foi desenvolvida para apresentar uma receita simples para um site
+                            claro, atrativo e objetivo.</p>
                         <div class="legend-project">
-                            <p><strong>Stack:</strong> HTML, CSS, React, Node JS</p>
+                            <p><strong>Stack:</strong> HTML, CSS, JavaScript, Bootstrap</p>
                         </div>
                         <div class="footer-project">
-                            <div class="url-project">
-                                <img src="assets/link-icon.svg" alt="Imagem projeto X Code Start">
-                                <a href="#">Site do projeto</a>
-                            </div>
                             <div class="code-project">
-                                <img src="assets/github-icon.svg" alt="Link do código do projeto X Code Start">
-                                <a href="#">Código fonte</a>
+                                <img src="assets/image/github-icon.svg" alt="Link do código do projeto X Code Start">
+                                <a href="https://marques-filho.github.io/simple-cake-recipe/">Site do projeto</a>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="card-project">
-                    <img src="assets/img-project.svg" alt="Imagem Projeto x Code Start">
+                    <img src="assets/image/img-project.svg" alt="Imagem Projeto x Code Start">
                     <div class="info-card-project">
-                        <h3>Controle Financeiro</h3>
-                        <p>Esse sistema foi desenvolvido para realizar o controle financeiro de empresas. Nesse sistema
-                            é possível gerenciar custos e fazer relatórios através dos dados dos captados.</p>
+                        <h3>Site Hamburgueria</h3>
+                        <p>Essa landing page modelo foi desenvolvida para apresentar serviços de uma empresa de forma
+                            clara, atrativa e objetiva.</p>
                         <div class="legend-project">
-                            <p><strong>Stack:</strong> HTML, CSS, React, Node JS</p>
+                            <p><strong>Stack:</strong> HTML, CSS, JavaScript, Bootstrap</p>
                         </div>
                         <div class="footer-project">
-                            <div class="url-project">
-                                <img src="assets/link-icon.svg" alt="Imagem projeto X Code Start">
-                                <a href="#">Site do projeto</a>
-                            </div>
                             <div class="code-project">
-                                <img src="assets/github-icon.svg" alt="Link do código do projeto X Code Start">
-                                <a href="#">Código fonte</a>
+                                <img src="assets/image/github-icon.svg" alt="Link do código do projeto X Code Start">
+                                <a href="https://marques-filho.github.io/challenge004-turmafs21/">Site do projeto</a>
                             </div>
                         </div>
                     </div>
@@ -172,64 +197,52 @@
             </div>
             <div class="info-projects">
                 <div class="card-project">
-                    <img src="assets/img-project.svg" alt="Imagem Projeto x Code Start">
+                    <img src="assets/image/img-project.svg" alt="Imagem Projeto x Code Start">
                     <div class="info-card-project">
-                        <h3>Controle Financeiro</h3>
-                        <p>Esse sistema foi desenvolvido para realizar o controle financeiro de empresas. Nesse sistema
-                            é possível gerenciar custos e fazer relatórios através dos dados dos captados.</p>
+                        <h3>Cadastro Modelo</h3>
+                        <p>Essa landing page modelo foi desenvolvida para apresentar serviços de uma empresa de forma
+                            clara, atrativa e objetiva.</p>
                         <div class="legend-project">
-                            <p><strong>Stack:</strong> HTML, CSS, React, Node JS</p>
+                            <p><strong>Stack:</strong> HTML, CSS, JavaScript, Bootstrap</p>
                         </div>
                         <div class="footer-project">
-                            <div class="url-project">
-                                <img src="assets/link-icon.svg" alt="Imagem projeto X Code Start">
-                                <a href="#">Site do projeto</a>
-                            </div>
                             <div class="code-project">
-                                <img src="assets/github-icon.svg" alt="Link do código do projeto X Code Start">
-                                <a href="#">Código fonte</a>
+                                <img src="assets/image/github-icon.svg" alt="Link do código do projeto X Code Start">
+                                <a href="https://marques-filho.github.io/challenge002-turmafs21/">Site do projeto</a>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="card-project">
-                    <img src="assets/img-project.svg" alt="Imagem Projeto x Code Start">
+                    <img src="assets/image/img-project.svg" alt="Imagem Projeto x Code Start">
                     <div class="info-card-project">
-                        <h3>Controle Financeiro</h3>
-                        <p>Esse sistema foi desenvolvido para realizar o controle financeiro de empresas. Nesse sistema
-                            é possível gerenciar custos e fazer relatórios através dos dados dos captados.</p>
+                        <h3>Curso Modelo</h3>
+                        <p>Essa landing page modelo foi desenvolvida para apresentar um curso de uma empresa de forma
+                            clara, atrativa e objetiva.</p>
                         <div class="legend-project">
-                            <p><strong>Stack:</strong> HTML, CSS, React, Node JS</p>
+                            <p><strong>Stack:</strong> HTML, CSS, JavaScript, Bootstrap</p>
                         </div>
                         <div class="footer-project">
-                            <div class="url-project">
-                                <img src="assets/link-icon.svg" alt="Imagem projeto X Code Start">
-                                <a href="#">Site do projeto</a>
-                            </div>
                             <div class="code-project">
-                                <img src="assets/github-icon.svg" alt="Link do código do projeto X Code Start">
-                                <a href="#">Código fonte</a>
+                                <img src="assets/image/github-icon.svg" alt="Link do código do projeto X Code Start">
+                                <a href="https://marques-filho.github.io/projeto-01-turma_fs-12/">Site do projeto</a>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="card-project">
-                    <img src="assets/img-project.svg" alt="Imagem Projeto x Code Start">
+                    <img src="assets/image/img-project.svg" alt="Imagem Projeto x Code Start">
                     <div class="info-card-project">
-                        <h3>Controle Financeiro</h3>
-                        <p>Esse sistema foi desenvolvido para realizar o controle financeiro de empresas. Nesse sistema
-                            é possível gerenciar custos e fazer relatórios através dos dados dos captados.</p>
+                        <h3>Layout Modelo</h3>
+                        <p>Esse layout modelo foi desenvolvido para apresentar informações de um site de forma simples,
+                            clara, atrativa e objetiva.</p>
                         <div class="legend-project">
-                            <p><strong>Stack:</strong> HTML, CSS, React, Node JS</p>
+                            <p><strong>Stack:</strong> HTML, CSS, JavaScript, Bootstrap</p>
                         </div>
                         <div class="footer-project">
-                            <div class="url-project">
-                                <img src="assets/link-icon.svg" alt="Imagem projeto X Code Start">
-                                <a href="#">Site do projeto</a>
-                            </div>
                             <div class="code-project">
-                                <img src="assets/github-icon.svg" alt="Link do código do projeto X Code Start">
-                                <a href="#">Código fonte</a>
+                                <img src="assets/image/github-icon.svg" alt="Link do código do projeto X Code Start">
+                                <a href="https://marques-filho.github.io/challenge003-turmafs21/">Site do projeto</a>
                             </div>
                         </div>
                     </div>
@@ -256,10 +269,11 @@
                             ducimus!
                         </p>
                         <div class="footer-card-depositions">
-                            <img src="assets/profile.svg" alt="Imagem depoimento Code Start" width="40px" height="40px">
+                            <img src="assets/image/profile.svg" alt="Imagem depoimento Code Start" width="40px"
+                                height="40px">
                             <div class="info-personal-depositions">
-                                <p class="name-depositions">Eduardo Róseo</p>
-                                <p class="occupation-depositions">CEO ME Software, professor Digital College</p>
+                                <p class="name-depositions">Fulano de Tal</p>
+                                <p class="occupation-depositions">CEO Empresa X</p>
                             </div>
                         </div>
                     </div>
@@ -270,10 +284,11 @@
                             ducimus!
                         </p>
                         <div class="footer-card-depositions">
-                            <img src="assets/profile.svg" alt="Imagem depoimento Code Start" width="40px" height="40px">
+                            <img src="assets/image/profile.svg" alt="Imagem depoimento Code Start" width="40px"
+                                height="40px">
                             <div class="info-personal-depositions">
-                                <p class="name-depositions">Eduardo Róseo</p>
-                                <p class="occupation-depositions">CEO ME Software, professor Digital College</p>
+                                <p class="name-depositions">Fulano de Tal</p>
+                                <p class="occupation-depositions">CEO Empresa X</p>
                             </div>
                         </div>
                     </div>
@@ -284,10 +299,11 @@
                             ducimus!
                         </p>
                         <div class="footer-card-depositions">
-                            <img src="assets/profile.svg" alt="Imagem depoimento Code Start" width="40px" height="40px">
+                            <img src="assets/image/profile.svg" alt="Imagem depoimento Code Start" width="40px"
+                                height="40px">
                             <div class="info-personal-depositions">
-                                <p class="name-depositions">Eduardo Róseo</p>
-                                <p class="occupation-depositions">CEO ME Software, professor Digital College</p>
+                                <p class="name-depositions">Fulano de Tal</p>
+                                <p class="occupation-depositions">CEO Empresa X</p>
                             </div>
                         </div>
                     </div>
@@ -298,10 +314,11 @@
                             ducimus!
                         </p>
                         <div class="footer-card-depositions">
-                            <img src="assets/profile.svg" alt="Imagem depoimento Code Start" width="40px" height="40px">
+                            <img src="assets/image/profile.svg" alt="Imagem depoimento Code Start" width="40px"
+                                height="40px">
                             <div class="info-personal-depositions">
-                                <p class="name-depositions">Eduardo Róseo</p>
-                                <p class="occupation-depositions">CEO ME Software, professor Digital College</p>
+                                <p class="name-depositions">Fulano de Tal</p>
+                                <p class="occupation-depositions">CEO Empresa X</p>
                             </div>
                         </div>
                     </div>
@@ -312,10 +329,11 @@
                             ducimus!
                         </p>
                         <div class="footer-card-depositions">
-                            <img src="assets/profile.svg" alt="Imagem depoimento Code Start" width="40px" height="40px">
+                            <img src="assets/image/profile.svg" alt="Imagem depoimento Code Start" width="40px"
+                                height="40px">
                             <div class="info-personal-depositions">
-                                <p class="name-depositions">Eduardo Róseo</p>
-                                <p class="occupation-depositions">CEO ME Software, professor Digital College</p>
+                                <p class="name-depositions">Fulano de Tal</p>
+                                <p class="occupation-depositions">CEO Empresa X</p>
                             </div>
                         </div>
                     </div>
@@ -326,10 +344,11 @@
                             ducimus!
                         </p>
                         <div class="footer-card-depositions">
-                            <img src="assets/profile.svg" alt="Imagem depoimento Code Start" width="40px" height="40px">
+                            <img src="assets/image/profile.svg" alt="Imagem depoimento Code Start" width="40px"
+                                height="40px">
                             <div class="info-personal-depositions">
-                                <p class="name-depositions">Eduardo Róseo</p>
-                                <p class="occupation-depositions">CEO ME Software, professor Digital College</p>
+                                <p class="name-depositions">Fulano de Tal</p>
+                                <p class="occupation-depositions">CEO Empresa X</p>
                             </div>
                         </div>
                     </div>
@@ -351,7 +370,7 @@
                     <textarea id="mensagem" placeholder="Mensagem"></textarea>
                     <div class="submit-form">
                         <input type="submit" value="Enviar">
-                        <img src="assets/send-icon.svg" alt="Imagem de seta para enviar formulário de contato">
+                        <img src="assets/image/send-icon.svg" alt="Imagem de seta para enviar formulário de contato">
                     </div>
                 </form>
                 <p id="loading" class="response-form" style="display: none;">Carregando...</p>
@@ -362,36 +381,36 @@
         </div>
     </section>
     <footer>
-        <div class="container">
-            <div class="first-info-footer">
-                <div class="logo">
-                    <img src="assets/logo.svg" alt="Logo Code Start">
-                </div>
-                <div class="container-right-footer">
-                    <p class="cellphone-footer">+55(85) 12345-6789</p>
-                    <p class="email-footer">marquesfilho1@outlook.com</p>
-                    <div class="icons-menu">
-                        <a href="#" target="_blank"><img src="assets/github.svg" alt="Imagem Github Code Start"></a>
-                        <a href="#" target="_blank"><img src="assets/twitter.svg" alt="Imagem Twitter Code Start"></a>
-                        <a href="#" target="_blank"><img src="assets/linkedin.svg" alt="Imagem LinkedIn Code Start"></a>
-                    </div>
-                </div>
-            </div>
-            <div class="second-info-footer">
-                <nav class="menu-footer">
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#aboutme">Sobre</a></li>
-                        <li><a href="#technologies">Tecnologias</a></li>
-                        <li><a href="#projects">Projetos</a></li>
-                        <li><a href="#contact">Contato</a></li>
-                    </ul>
-                </nav>
-                <p class="copyright">Todos os Direitos Reservados @ Code Start 2024</p>
+        <div class="copyright text-center">
+            <div>
+                <p class="pb-2">+55(85) 12345-6789</p>
+                <p class="pb-2">marquesfilho1@outlook.com</p>
+                <d class="icons-menu">
+                    <a href="https://github.com/Marques-Filho" target="_blank"><img src="assets/image/github.svg"
+                            alt="Imagem Github Code Start"></a>
+                    <a href="#" target="_blank"><img src="assets/image/twitter.svg" alt="Imagem Twitter Code Start"></a>
+                    <a href="#" target="_blank"><img src="assets/image/linkedin.svg"
+                            alt="Imagem LinkedIn Code Start"></a>
             </div>
         </div>
+        <div class="second-info-footer">
+            <nav class="menu-footer text-center">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#aboutme">Sobre</a></li>
+                    <li><a href="#technologies">Tecnologias</a></li>
+                    <li><a href="#projects">Projetos</a></li>
+                    <li><a href="#contact">Contato</a></li>
+                </ul>
+            </nav>
+            <p class="copyright text-center">Todos os Direitos Reservados @ Code Start 2024</p>
+        </div>
+        </div>
     </footer>
-    <script src="script.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
